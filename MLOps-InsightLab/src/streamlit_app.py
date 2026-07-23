@@ -32,7 +32,7 @@ st.set_page_config(
 # ----------------------------------------------------------------------
 # La API debe estar corriendo (uvicorn api:app --reload).
 # Se usa /recommend porque devuelve: probabilidad, prediccion y recomendacion.
-API_RECOMMEND_URL = "http://127.0.0.1:8000/recommend"
+API_RECOMMEND_URL = "https://insightlab-api.onrender.com/recommend"
 
 # ----------------------------------------------------------------------
 # ESTILOS (CSS) para que se vea mas lindo
