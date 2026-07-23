@@ -15,7 +15,8 @@ COPY src/ ./src
 # Si api.py/streamlit_app.py necesitan el CSV, lo copiamos también
 COPY Ecommerce.csv .
 
+WORKDIR /app/src
 EXPOSE 8000
 
 # OJO: ahora api.py está en /app/src/api.py, no en /app/api.py
-CMD ["uvicorn", "src.api:app", "--host", "0.0.0.0", "--port", "8000"]
+CMD ["sh", "-c", "uvicorn api:app --host 0.0.0.0 --port ${PORT:-8000}"]
