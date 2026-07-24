@@ -1,0 +1,40 @@
+# ======================================================================================
+# TESTS AUTOMATIZADOS DE LA API
+# ======================================================================================
+# Este workflow ejecuta los tests de la API cada vez que se sube codigo a develop
+# o certification, y en cada Pull Request hacia esas ramas.
+# Si algun test falla, GitHub lo marca en rojo y avisa antes de que el cambio se
+# integre o se despliegue.
+# ======================================================================================
+
+name: Tests de la API
+
+on:
+  push:
+    branches: [develop, certification, main]
+  pull_request:
+    branches: [develop, certification, main]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Descargar el codigo del repositorio
+        uses: actions/checkout@v4
+
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Instalar dependencias
+        working-directory: MLOps-InsightLab
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install pytest httpx
+
+      - name: Ejecutar los tests
+        working-directory: MLOps-InsightLab
+        run: pytest tests/ -v
