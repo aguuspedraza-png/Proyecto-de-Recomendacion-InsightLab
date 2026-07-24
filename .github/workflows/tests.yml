@@ -22,6 +22,8 @@ jobs:
     steps:
       - name: Descargar el codigo del repositorio
         uses: actions/checkout@v4
+        with:
+          lfs: true
 
       - name: Configurar Python
         uses: actions/setup-python@v5
