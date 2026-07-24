@@ -1,3 +1,15 @@
+## 🔗 Demo en vivo
+
+**Aplicación:** https://insightlab-demo.streamlit.app  
+**API:** https://insightlab-api.onrender.com/docs
+
+La demo permite cargar los datos de una sesión y obtener la predicción de compra junto con la recomendación sugerida, sin necesidad de instalar nada.
+
+> **Nota:** la API está desplegada en un plan gratuito que se suspende por inactividad. La primera consulta puede demorar hasta un minuto mientras el servicio se reactiva.
+
+---
+
+
 # Documentación - Proyecto de Recomendación InsightLab
 
 ## Descripción general
