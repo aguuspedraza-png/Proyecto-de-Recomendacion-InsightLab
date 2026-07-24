@@ -1,7 +1,7 @@
 # Manipulación y análisis de datos
-pandas
-numpy
-scipy
+pandas==2.3.3
+numpy==2.4.6
+scipy==1.17.1
 db-dtypes
 
 # Visualización
@@ -9,12 +9,12 @@ matplotlib
 seaborn
 
 # Machine Learning
-scikit-learn
+scikit-learn==1.9.0
 xgboost
 catboost
 
 # Persistencia de modelos y tracking
-joblib
+joblib==1.5.3
 mlflow
 mlxtend
 
